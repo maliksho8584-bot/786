@@ -1,0 +1,1758 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>Preview</title><style>body{font-family:system-ui;padding:16px}
+iframe, img{max-width:100%}</style></head><body><!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>786 ڈیکوریشن اور نمبر پلیٹس | لگژری ڈیزائنز</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f0d060;
+            --gold-dark: #b8962e;
+            --gold-gradient: linear-gradient(135deg, #cfc09f 0%, #ffecb3 30%, #d4af37 50%, #aa8c32 70%, #cfc09f 100%);
+            --bg-dark: #050505;
+            --bg-card: #0d0d0d;
+            --bg-surface: #111111;
+            --text-muted: #888;
+            --text-light: #ccc;
+            --glass-bg: rgba(212, 175, 55, 0.04);
+            --glass-border: rgba(212, 175, 55, 0.12);
+            --shadow-gold: 0 8px 40px rgba(212, 175, 55, 0.12);
+            --shadow-heavy: 0 25px 80px rgba(0,0,0,0.7);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+            min-height: 100vh;
+            text-align: right;
+            font-family: 'Poppins', 'Noto Nastaliq Urdu', sans-serif;
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.03) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(212,175,55,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(212,175,55,0.02) 0%, transparent 50%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--gold), var(--gold-dark)); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+
+        .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in { opacity: 0; transition: opacity 0.8s ease; }
+        .fade-in.visible { opacity: 1; }
+
+        .gold-text {
+            background: linear-gradient(to bottom, #cfc09f 18%, #ffecb3 30%, #d4af37 48%, #aa8c32 72%, #cfc09f 88%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+        .gold-text-shadow {
+            text-shadow: 0 0 40px rgba(212,175,55,0.15), 0 0 80px rgba(212,175,55,0.05);
+        }
+
+        /* ===== WELCOME OVERLAY ===== */
+        #welcomeOverlay {
+            position: fixed; top:0; left:0; width:100%; height:100%;
+            background: radial-gradient(ellipse at center, #0d0d0d 0%, #000 100%);
+            display:flex; flex-direction:column; align-items:center; justify-content:center;
+            z-index:9999;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        #welcomeOverlay.hidden { opacity:0; transform: scale(1.05); pointer-events:none; }
+        .welcome-particle-container { position: absolute; width:100%; height:100%; overflow:hidden; pointer-events:none; }
+        .welcome-particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--gold);
+            animation: floatParticle linear infinite;
+        }
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity:0; }
+            10% { opacity:1; }
+            90% { opacity:1; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity:0; }
+        }
+        .welcome-logo {
+            font-size: 5.5rem; font-weight:900;
+            background: linear-gradient(to bottom, #cfc09f 18%, #ffecb3 30%, #d4af37 48%, #aa8c32 72%, #cfc09f 88%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 60px rgba(212,175,55,0.2);
+            letter-spacing:8px; margin-bottom:8px;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%,100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+        .welcome-sub {
+            font-size:1.6rem;
+            background: linear-gradient(135deg, #aa8c32, #d4af37, #aa8c32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing:3px; font-weight:700;
+            margin-bottom:50px;
+        }
+        .enter-btn {
+            position:relative;
+            padding:18px 90px; font-size:1.8rem; font-weight:700;
+            background: linear-gradient(145deg, #d4af37, #b8962e, #d4af37);
+            background-size: 200% 200%;
+            color:#000; border:none; border-radius:60px;
+            cursor:pointer; transition: all 0.4s ease; text-transform:uppercase;
+            box-shadow: 0 0 50px rgba(212,175,55,0.2);
+            overflow:hidden;
+            animation: goldShimmer 4s ease-in-out infinite;
+        }
+        @keyframes goldShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .enter-btn:hover { transform:scale(1.08); box-shadow:0 0 80px rgba(212,175,55,0.5); }
+        .enter-btn::after {
+            content: '';
+            position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+            animation: btnShine 3s ease-in-out infinite;
+        }
+        @keyframes btnShine {
+            0% { transform: translateX(-100%) rotate(25deg); }
+            100% { transform: translateX(100%) rotate(25deg); }
+        }
+
+        /* ===== MAIN SITE ===== */
+        #siteContainer { display: none; }
+        #siteContainer.active { display: block; animation: siteFadeIn 0.8s ease; }
+        @keyframes siteFadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+        /* ===== HEADER ===== */
+        header {
+            background: rgba(10,10,10,0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding:12px 35px;
+            display:flex; justify-content:space-between; align-items:center;
+            border-bottom:1px solid var(--glass-border);
+            position: sticky; top:0; z-index:100;
+            flex-wrap:wrap; gap:15px;
+        }
+        .logo h1 {
+            font-size:2rem; font-weight:900;
+            background: linear-gradient(to bottom, #d4af37, #aa8c32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing:2px;
+        }
+        .logo small {
+            display:block; font-size:0.75rem; color:#aa8c32; letter-spacing:2px; margin-top:3px;
+        }
+        .header-right { display:flex; align-items:center; gap:15px; flex-wrap:wrap; }
+        .search-bar {
+            display:flex; align-items:center; background:rgba(20,20,20,0.8);
+            border:1px solid var(--glass-border); border-radius:40px; overflow:hidden;
+            transition: 0.3s; backdrop-filter: blur(10px);
+        }
+        .search-bar:focus-within { border-color: var(--gold); box-shadow: 0 0 25px rgba(212,175,55,0.1); }
+        .search-bar input {
+            padding:12px 22px; background:transparent; border:none;
+            color:#fff; outline:none; width:200px; font-size:0.9rem; text-align: right;
+        }
+        .search-bar input::placeholder { color:#555; }
+        .search-bar button {
+            padding:12px 22px; background:var(--gold-gradient); color:#000; border:none;
+            cursor:pointer; font-weight:700; transition:0.3s; font-size:0.9rem;
+        }
+        .search-bar button:hover { filter: brightness(1.15); }
+        .auth-buttons { display:flex; gap:8px; }
+        .auth-buttons button, .btn-admin {
+            padding:10px 24px; border-radius:40px; border:1px solid var(--glass-border);
+            background:rgba(255,255,255,0.03); color:var(--gold); cursor:pointer;
+            font-weight:600; transition:0.3s; font-size:0.85rem;
+            backdrop-filter: blur(10px);
+        }
+        .auth-buttons button:hover { background:var(--gold); color:#000; }
+        .btn-admin {
+            background:var(--gold-gradient); color:#000; border:2px solid transparent;
+            font-weight:700; letter-spacing:1px; padding:10px 26px;
+        }
+        .btn-admin:hover { box-shadow:0 0 30px rgba(212,175,55,0.3); transform:translateY(-2px); }
+        .user-dropdown-btn {
+            padding:10px 24px; border-radius:40px;
+            background:var(--gold-gradient); color:#000; border:none;
+            font-weight:600; cursor:pointer; transition:0.3s; font-size:0.85rem;
+        }
+        .user-dropdown-btn:hover { transform:translateY(-2px); box-shadow:0 0 20px rgba(212,175,55,0.3); }
+        .user-dropdown-menu {
+            display:none; position:absolute; top:100%; left:0; min-width:200px;
+            background:#151515; border:1px solid var(--glass-border);
+            border-radius:12px; overflow:hidden; z-index:999;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+        }
+        .user-dropdown-menu.show { display:block; }
+        .user-dropdown-menu a {
+            display:block; padding:12px 20px; color:#ccc; text-decoration:none;
+            border-bottom:1px solid #222; transition:0.3s; font-size:0.9rem;
+        }
+        .user-dropdown-menu a:hover { background:rgba(212,175,55,0.08); color:var(--gold); }
+        .user-dropdown-menu a.logout { color:#ff4444; }
+        .user-dropdown-menu a.logout:hover { background:rgba(255,0,0,0.08); }
+
+        /* ===== NOTIFICATION BAR ===== */
+        .notification-bar {
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.08), transparent);
+            padding: 10px 20px; text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            color: #aa8c32; font-size: 0.9rem; letter-spacing: 1px;
+        }
+        .notification-bar i { color: var(--gold); margin: 0 5px; }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative; min-height: 85vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; padding: 100px 20px 80px; overflow: hidden;
+            background: radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.04) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 80%, rgba(212,175,55,0.03) 0%, transparent 50%),
+                        var(--bg-dark);
+        }
+        .hero-particles { position: absolute; width:100%; height:100%; top:0; left:0; pointer-events:none; overflow:hidden; }
+        .hero-particle {
+            position: absolute; width: 2px; height: 2px;
+            background: var(--gold); border-radius: 50%;
+            animation: heroFloat linear infinite;
+        }
+        @keyframes heroFloat {
+            0% { transform: translateY(100vh) scale(0); opacity:0; }
+            10% { opacity:0.6; }
+            90% { opacity:0.6; }
+            100% { transform: translateY(-10vh) scale(1); opacity:0; }
+        }
+        .hero h2 {
+            font-size: 4.5rem; font-weight: 900; margin-bottom: 15px; letter-spacing: 3px;
+            background: linear-gradient(to bottom, #cfc09f 18%, #ffecb3 30%, #d4af37 48%, #aa8c32 72%, #cfc09f 88%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            text-shadow: 0 0 60px rgba(212,175,55,0.1);
+        }
+        .hero p { font-size: 1.3rem; color: #999; max-width: 650px; margin: 0 auto 8px; line-height: 1.8; }
+        .hero .brand-line {
+            background: linear-gradient(135deg, #d4af37, #ffecb3, #d4af37);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            font-style: italic; font-size: 1.4rem; font-weight: 700; margin-top: 20px;
+        }
+        .hero .hero-badge {
+            display: inline-block; padding: 8px 30px;
+            background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 40px; color: var(--gold); font-size: 0.85rem; letter-spacing: 2px;
+            margin-bottom: 25px; backdrop-filter: blur(10px);
+        }
+        .hero .whatsapp-cta {
+            display:inline-flex; align-items:center; gap:10px;
+            margin-top:35px; padding:16px 55px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color:#fff; text-decoration:none; border-radius:60px; font-weight:700; font-size:1.2rem;
+            transition:0.4s; box-shadow:0 0 40px rgba(37,211,102,0.2);
+        }
+        .hero .whatsapp-cta:hover { transform:scale(1.05) translateY(-3px); box-shadow:0 0 60px rgba(37,211,102,0.35); }
+
+        /* ===== COUNTER SECTION ===== */
+        .counter-section {
+            display:flex; flex-wrap:wrap; justify-content:center; gap:60px;
+            padding:50px 20px;
+            background: linear-gradient(180deg, transparent, rgba(212,175,55,0.02), transparent);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .counter-item { text-align:center; }
+        .counter-item .num { font-size: 3rem; font-weight:900; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .counter-item .label { color: #666; font-size: 0.9rem; margin-top: 5px; letter-spacing: 1px; }
+
+        /* ===== REVIEWS ===== */
+        .reviews-section { padding:70px 20px; position: relative; }
+        .reviews-section::before {
+            content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+            background: radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.02), transparent); pointer-events:none;
+        }
+        .reviews-section h3 { text-align:center; font-size:2.5rem; margin-bottom:15px; }
+        .section-subtitle { text-align:center; color:#666; margin-bottom:50px; font-size:1rem; letter-spacing:2px; }
+        .reviews-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; max-width:1200px; margin:0 auto; }
+        .review-card {
+            background: rgba(15,15,15,0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            padding:30px; border-radius:16px; width:280px;
+            border:1px solid var(--glass-border); text-align:center; transition:0.4s;
+        }
+        .review-card:hover { transform: translateY(-8px); border-color: rgba(212,175,55,0.3); box-shadow: 0 15px 50px rgba(0,0,0,0.4); }
+        .review-card .stars { color:var(--gold); font-size:1.3rem; margin-bottom:12px; }
+        .review-card p { color:#999; font-style:italic; font-size:0.9rem; line-height:1.7; }
+        .review-card .name { color:var(--gold); margin-top:15px; font-weight:600; }
+        .review-card .review-avatar {
+            width: 50px; height: 50px; background: var(--gold-gradient);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 12px; font-size: 1.3rem; color: #000; font-weight: 700;
+        }
+
+        /* ===== PRODUCTS ===== */
+        .products-section { padding:80px 20px; position: relative; }
+        .products-section h3 { text-align:center; font-size:2.8rem; margin-bottom:10px; }
+        .products-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:1300px; margin:0 auto; }
+        .product-card {
+            background: var(--bg-card); border-radius:18px; overflow:hidden;
+            width:290px; border:1px solid var(--glass-border);
+            transition:0.5s; position:relative; text-align:center; transform: translateZ(0);
+        }
+        .product-card::before {
+            content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+            background: linear-gradient(180deg, rgba(212,175,55,0.02), transparent);
+            pointer-events:none; opacity:0; transition:0.5s;
+        }
+        .product-card:hover { transform:translateY(-12px); box-shadow: 0 25px 70px rgba(0,0,0,0.5), 0 0 30px rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.3); }
+        .product-card:hover::before { opacity:1; }
+        .product-card .img-box {
+            height:240px; background:#151515; display:flex; align-items:center; justify-content:center;
+            border-bottom:1px solid var(--glass-border); overflow:hidden; position:relative;
+        }
+        .product-card .img-box img { width:100%; height:100%; object-fit:cover; transition: 0.6s ease; }
+        .product-card:hover .img-box img { transform: scale(1.08); }
+        .product-card .img-box .no-img { color:#333; font-size:0.9rem; text-align:center; padding:10px; }
+        .product-card .img-box .product-badge {
+            position:absolute; top:12px; right:12px;
+            background: var(--gold-gradient); color:#000; padding:4px 14px; border-radius:20px;
+            font-size:0.75rem; font-weight:700; letter-spacing:1px;
+        }
+        .product-card .info { padding:22px 20px 10px; }
+        .product-card .info h4 { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom:6px; font-size:1.15rem; }
+        .product-card .info p { color:#666; font-size:0.85rem; margin-bottom:8px; }
+        .product-card .info .price { color:#fff; font-size:1.4rem; font-weight:700; }
+        .product-card .buy-btn {
+            display:block; margin:15px 20px 22px; padding:13px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color:#fff; text-decoration:none; border-radius:40px; font-weight:600; transition:0.3s; font-size:0.95rem; border:none; cursor:pointer; width:calc(100% - 40px);
+        }
+        .product-card .buy-btn:hover { transform: scale(1.03); box-shadow:0 0 30px rgba(37,211,102,0.2); }
+
+        /* ===== MODALS ===== */
+        .modal-overlay {
+            display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.9); z-index:1000;
+            align-items:center; justify-content:center;
+            backdrop-filter: blur(10px);
+        }
+        .modal-overlay.active { display:flex; }
+        .modal-box {
+            background: linear-gradient(145deg, #151515, #0d0d0d);
+            padding:40px; border-radius:24px;
+            width:90%; max-width:460px;
+            border:1px solid var(--glass-border);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+            max-height: 90vh; overflow-y: auto;
+        }
+        .modal-box h3 { text-align:center; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom:25px; font-size:1.8rem; }
+        .modal-box input, .modal-box select, .modal-box textarea {
+            width:100%; padding:14px 18px; margin-bottom:15px;
+            background:rgba(10,10,10,0.8); border:1px solid #222; border-radius:12px;
+            color:#fff; font-size:0.95rem; outline:none; transition:0.3s; text-align: right;
+            font-family: inherit;
+        }
+        .modal-box input:focus, .modal-box select:focus, .modal-box textarea:focus { border-color:var(--gold); box-shadow: 0 0 20px rgba(212,175,55,0.05); }
+        .modal-box select option { background: #111; color: #fff; }
+        .modal-box textarea { resize: vertical; min-height: 80px; }
+        .modal-box button[type="submit"], .modal-box .primary-btn {
+            width:100%; padding:15px;
+            background: var(--gold-gradient); color:#000; border:none; border-radius:14px;
+            font-weight:700; font-size:1.05rem; cursor:pointer; transition:0.3s;
+        }
+        .modal-box button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(212,175,55,0.2); }
+        .modal-box .switch-link { text-align:center; margin-top:15px; color:#666; cursor:pointer; font-size:0.9rem; }
+        .modal-box .switch-link span { color:var(--gold); font-weight:600; }
+        .modal-close { float:left; background:none; border:none; color:var(--gold); font-size:2rem; cursor:pointer; opacity:0.7; transition:0.3s; }
+        .modal-close:hover { opacity:1; }
+        .modal-box .info-row {
+            display:flex; justify-content:space-between; padding:8px 0;
+            border-bottom: 1px solid #1a1a1a; color:#bbb; font-size:0.95rem;
+        }
+        .modal-box .info-row .label { color:#888; }
+        .modal-box .info-row .value { color:var(--gold); font-weight:600; }
+
+        /* ===== MY ORDERS FOLDER ===== */
+        .my-orders-container {
+            max-width: 900px; margin: 0 auto; padding: 20px;
+        }
+        .my-orders-container h3 {
+            text-align:center; font-size:2rem; margin-bottom:10px;
+        }
+        .order-card {
+            background: rgba(15,15,15,0.8); border-radius:16px;
+            border:1px solid var(--glass-border); margin-bottom:20px;
+            overflow:hidden; transition:0.3s;
+        }
+        .order-card:hover { border-color: rgba(212,175,55,0.3); }
+        .order-card .order-header {
+            display:flex; justify-content:space-between; align-items:center;
+            padding:18px 22px; background: rgba(212,175,55,0.04);
+            border-bottom:1px solid var(--glass-border); flex-wrap:wrap; gap:10px;
+        }
+        .order-card .order-header .order-id { color:var(--gold); font-weight:700; font-size:1.1rem; }
+        .order-card .order-header .order-date { color:#666; font-size:0.85rem; }
+        .order-card .order-body { padding:18px 22px; }
+        .order-card .order-body .product-name { color:#fff; font-weight:600; margin-bottom:5px; }
+        .order-card .order-body .order-details { color:#888; font-size:0.9rem; line-height:1.8; }
+        .order-card .order-footer {
+            display:flex; justify-content:space-between; align-items:center;
+            padding:14px 22px; border-top:1px solid #181818; flex-wrap:wrap; gap:10px;
+        }
+        .order-card .order-footer .price { color:#fff; font-weight:700; font-size:1.1rem; }
+        .status-badge {
+            display: inline-block; padding:5px 16px; border-radius:20px;
+            font-size:0.8rem; font-weight:600;
+        }
+        .status-pending { background: rgba(255,165,0,0.15); color: orange; }
+        .status-processing { background: rgba(0,150,255,0.15); color: #4a9eff; }
+        .status-shipped { background: rgba(212,175,55,0.15); color: var(--gold); }
+        .status-delivered { background: rgba(0,200,83,0.15); color: #00c853; }
+        .status-cancelled { background: rgba(255,0,0,0.15); color: #ff4444; }
+        .order-tracker {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 0; position: relative;
+        }
+        .order-tracker::before {
+            content: ''; position: absolute; top: 50%; left: 5%; right: 5%;
+            height: 2px; background: #222; transform: translateY(-50%);
+        }
+        .order-tracker .step {
+            display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1;
+        }
+        .order-tracker .step .dot {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: #222; border: 2px solid #333;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; color: #555; margin-bottom: 5px; transition: 0.5s;
+        }
+        .order-tracker .step.active .dot {
+            background: var(--gold-gradient); border-color: var(--gold);
+            color: #000; box-shadow: 0 0 20px rgba(212,175,55,0.3);
+        }
+        .order-tracker .step.cancelled .dot { background: #ff4444; border-color: #ff4444; color: #fff; }
+        .order-tracker .step .label { font-size: 0.65rem; color: #555; text-align: center; }
+        .order-tracker .step.active .label { color: var(--gold); }
+        .order-tracker .step.cancelled .label { color: #ff4444; }
+        .order-card .whatsapp-share-btn {
+            display:inline-flex; align-items:center; gap:8px;
+            padding:10px 24px; background: linear-gradient(135deg, #25D366, #128C7E);
+            color:#fff; border:none; border-radius:30px; cursor:pointer;
+            font-weight:600; font-size:0.9rem; transition:0.3s; text-decoration:none;
+        }
+        .order-card .whatsapp-share-btn:hover { transform: scale(1.05); box-shadow:0 0 25px rgba(37,211,102,0.3); }
+
+        /* ===== ADMIN PANEL ===== */
+        .admin-panel {
+            display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.97); z-index:2000; overflow-y:auto; padding:20px;
+        }
+        .admin-panel.active { display:block; animation: adminFadeIn 0.3s ease; }
+        @keyframes adminFadeIn { from { opacity:0; } to { opacity:1; } }
+        .admin-panel .admin-header {
+            display:flex; justify-content:space-between; align-items:center;
+            padding:15px 20px; border-bottom:1px solid var(--glass-border); flex-wrap:wrap; gap:15px;
+        }
+        .admin-panel .admin-header h2 { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size:1.6rem; }
+        .admin-panel .admin-header button {
+            padding:10px 30px; background:linear-gradient(135deg, #ff3333, #cc0000); color:#fff; border:none;
+            border-radius:12px; cursor:pointer; font-weight:600; transition:0.3s;
+        }
+        .admin-panel .admin-header button:hover { transform: translateY(-2px); box-shadow:0 0 30px rgba(255,0,0,0.2); }
+        .admin-tabs { display:flex; gap:10px; margin:30px 0; flex-wrap:wrap; }
+        .admin-tabs button {
+            padding:12px 30px; background:rgba(20,20,20,0.8); border:1px solid var(--glass-border);
+            color:var(--gold); border-radius:12px; cursor:pointer; font-weight:600;
+            transition:0.3s; font-size:0.9rem;
+        }
+        .admin-tabs button.active, .admin-tabs button:hover { background:var(--gold-gradient); color:#000; border-color:transparent; }
+        .admin-tab-content { display:none; }
+        .admin-tab-content.active { display:block; }
+
+        .admin-table {
+            width:100%; border-collapse:collapse; margin-top:20px;
+            background:rgba(10,10,10,0.6); border-radius:12px; overflow:hidden; text-align: right;
+        }
+        .admin-table th { background: rgba(212,175,55,0.1); color:var(--gold); padding:14px; font-weight:600; text-align: right; border-bottom: 1px solid var(--glass-border); font-size:0.9rem; }
+        .admin-table td { padding:14px; border-bottom:1px solid #181818; color:#bbb; font-size:0.9rem; }
+        .admin-table tr:hover td { background: rgba(212,175,55,0.02); }
+        .admin-table td .del-btn {
+            padding:6px 16px; background:linear-gradient(135deg, #ff3333, #cc0000); color:#fff; border:none;
+            border-radius:8px; cursor:pointer; margin-left:5px; font-size:0.8rem; font-weight:600; transition:0.3s;
+        }
+        .admin-table td .del-btn:hover { transform: scale(1.05); }
+        .admin-table td .edit-btn {
+            padding:6px 16px; background:var(--gold-gradient); color:#000; border:none;
+            border-radius:8px; cursor:pointer; margin-left:5px; font-size:0.8rem; font-weight:600; transition:0.3s;
+        }
+        .admin-table td .edit-btn:hover { transform: scale(1.05); }
+        .admin-table td .view-btn {
+            padding:6px 16px; background:rgba(0,150,255,0.2); color:#4a9eff; border:1px solid rgba(0,150,255,0.3);
+            border-radius:8px; cursor:pointer; margin-left:5px; font-size:0.8rem; font-weight:600; transition:0.3s;
+        }
+        .admin-table td .view-btn:hover { background:rgba(0,150,255,0.3); }
+
+        .admin-add-form {
+            display:flex; flex-wrap:wrap; gap:10px; margin:20px 0;
+            background:rgba(15,15,15,0.6); padding:25px; border-radius:16px;
+            border:1px solid var(--glass-border);
+        }
+        .admin-add-form input { padding:12px 16px; background:rgba(5,5,5,0.8); border:1px solid #222; border-radius:10px; color:#fff; flex:1; min-width:150px; text-align: right; transition:0.3s; }
+        .admin-add-form input:focus { border-color:var(--gold); }
+        .admin-add-form button { padding:12px 35px; background:var(--gold-gradient); color:#000; border:none; border-radius:10px; font-weight:700; cursor:pointer; transition:0.3s; }
+        .admin-add-form button:hover { transform: translateY(-2px); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: rgba(10,10,10,0.9); backdrop-filter: blur(20px);
+            padding:50px 20px 30px; text-align:center;
+            border-top:1px solid var(--glass-border);
+        }
+        footer .footer-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1000px; margin:0 auto 30px; text-align:right; }
+        footer .footer-col h5 { color: var(--gold); font-size:1.1rem; margin-bottom:15px; }
+        footer .footer-col p, footer .footer-col a { color:#666; font-size:0.9rem; margin:5px 0; text-decoration:none; display:block; }
+        footer .footer-col a:hover { color: var(--gold); }
+        footer .footer-divider { height:1px; background: var(--glass-border); max-width:600px; margin:0 auto 20px; }
+        footer p { color:#666; margin:5px 0; font-size:0.9rem; }
+        footer .credit { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-top:15px; font-weight:700; letter-spacing:1px; }
+
+        /* ===== TOAST ===== */
+        .toast-container { position: fixed; bottom: 30px; left: 30px; z-index: 99999; display: flex; flex-direction: column; gap: 10px; }
+        .toast {
+            padding: 16px 24px; border-radius: 14px;
+            background: rgba(10,10,10,0.95); backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border); color: #fff; font-size: 0.9rem;
+            animation: toastIn 0.4s ease; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .toast.toast-success { border-color: #25D366; }
+        .toast.toast-error { border-color: #ff4444; }
+        .toast.toast-info { border-color: var(--gold); }
+        @keyframes toastIn { from { opacity:0; transform: translateX(-30px); } to { opacity:1; transform: translateX(0); } }
+        .toast-out { animation: toastOut 0.3s ease forwards; }
+        @keyframes toastOut { to { opacity:0; transform: translateX(-30px); } }
+
+        /* ===== USER DROPDOWN WRAPPER ===== */
+        .user-dropdown-wrapper {
+            position: relative; display: inline-block;
+        }
+
+        @media(max-width:768px) {
+            header { flex-direction:column; align-items:stretch; }
+            .header-right { flex-direction:column; }
+            .search-bar input { width:100%; }
+            .hero h2 { font-size:2.4rem; }
+            .welcome-logo { font-size:3rem; }
+            .enter-btn { padding:15px 50px; font-size:1.3rem; }
+            .products-grid { gap:20px; }
+            .admin-tabs button { flex:1; text-align:center; }
+            .counter-section { gap:30px; }
+            .counter-item .num { font-size:2rem; }
+            .modal-box { padding:25px; }
+            .product-card { width:100%; max-width:320px; }
+            .order-card .order-header { flex-direction:column; align-items:flex-start; }
+            .order-card .order-footer { flex-direction:column; align-items:flex-start; }
+        }
+        @media(max-width:480px) {
+            .hero h2 { font-size:1.8rem; }
+            .hero p { font-size:1rem; }
+            .hero .brand-line { font-size:1.1rem; }
+            .welcome-logo { font-size:2.2rem; }
+            .welcome-sub { font-size:1rem; }
+            .enter-btn { padding:12px 35px; font-size:1.1rem; padding:14px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== WELCOME OVERLAY ===== -->
+<div id="welcomeOverlay">
+    <div class="welcome-particle-container" id="welcomeParticles"></div>
+    <div class="welcome-logo">786</div>
+    <div class="welcome-sub">ڈیکوریشن اور نمبر پلیٹس</div>
+    <button class="enter-btn" id="enterBtn">داخل ہوں</button>
+</div>
+
+<!-- ===== MAIN SITE ===== -->
+<div id="siteContainer">
+
+<header>
+    <div class="logo">
+        <h1>786</h1>
+        <small>ڈیکوریشن اور نمبر پلیٹس</small>
+    </div>
+    <div class="header-right">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="پروڈکٹ تلاش کریں..." />
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="auth-buttons" id="authButtons">
+            <button id="loginBtn"><i class="fas fa-user"></i> لاگ ان</button>
+            <button id="registerBtn">رجسٹر</button>
+        </div>
+        <div class="user-dropdown-wrapper" id="userDropdownWrapper" style="display:none;">
+            <button class="user-dropdown-btn" id="userDropdownBtn"><i class="fas fa-user-circle"></i> <span id="loggedInUserName">صارف</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="user-dropdown-menu" id="userDropdownMenu">
+                <a href="#" id="myOrdersLink"><i class="fas fa-shopping-bag"></i> میرے آرڈرز</a>
+                <a href="#" id="userLogoutBtn" class="logout"><i class="fas fa-sign-out-alt"></i> لاگ آؤٹ</a>
+            </div>
+        </div>
+        <button class="btn-admin" id="adminPanelBtn"><i class="fas fa-crown"></i> سی ای او پینل</button>
+    </div>
+</header>
+
+<div class="notification-bar">
+    <i class="fas fa-truck"></i> فری ڈیلیوری آرڈر پر 3000+ <i class="fas fa-gem"></i> پریمیم کوالٹی <i class="fas fa-shield-alt"></i> 100% گارنٹی
+</div>
+
+<section class="hero">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-badge"><i class="fas fa-crown"></i> پریمیم کلیکشن 2026</div>
+    <h2 class="gold-text-shadow">لگژری کی نئی پہچان</h2>
+    <p>پریمیم نمبر پلیٹس اور ڈیکوریشن پیسز، سنہری خوبصورتی کے ساتھ — ہر ڈیزائن ایک شاہکار ہے۔</p>
+    <p class="brand-line">"آپ کی پہچان بہترین کی حقدار ہے — سفید پر سونا، خوبصورتی کا نمونہ۔"</p>
+    <a class="whatsapp-cta" href="https://wa.me/923197976735" target="_blank">
+        <i class="fab fa-whatsapp"></i> واٹس ایپ پر آرڈر کریں
+    </a>
+</section>
+
+<section class="counter-section">
+    <div class="counter-item fade-up"><div class="num" id="counterProducts">50+</div><div class="label">پروڈکٹس</div></div>
+    <div class="counter-item fade-up"><div class="num" id="counterClients">200+</div><div class="label">خوش گاہک</div></div>
+    <div class="counter-item fade-up"><div class="num" id="counterOrders">150+</div><div class="label">آرڈرز مکمل</div></div>
+    <div class="counter-item fade-up"><div class="num" id="counterRating">4.9</div><div class="label">ریٹنگ</div></div>
+</section>
+
+<section class="reviews-section">
+    <h3 class="gold-text">ہمارے گاہکوں کی رائے</h3>
+    <p class="section-subtitle">وہ کیا کہتے ہیں جو ہم سے خرید چکے ہیں</p>
+    <div class="reviews-grid" id="reviewsContainer"></div>
+</section>
+
+<section class="products-section" id="productsSection">
+    <h3 class="gold-text">ہماری مصنوعات</h3>
+    <p class="section-subtitle">پریمیم کلیکشن — سنہری معیار</p>
+    <div class="products-grid" id="productsContainer"></div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h5><i class="fas fa-info-circle"></i> ہمارے بارے میں</h5>
+            <p>786 ڈیکوریشن اور نمبر پلیٹس — پریمیم کوالٹی کے ڈیزائنز اور لگژری نمبر پلیٹس فراہم کرنے والا معتبر ادارہ۔</p>
+        </div>
+        <div class="footer-col">
+            <h5><i class="fas fa-link"></i> فوری روابط</h5>
+            <a href="#productsSection"><i class="fas fa-chevron-left"></i> مصنوعات</a>
+            <a href="https://wa.me/923197976735" target="_blank"><i class="fab fa-whatsapp"></i> واٹس ایپ</a>
+        </div>
+        <div class="footer-col">
+            <h5><i class="fas fa-phone"></i> رابطہ کریں</h5>
+            <p><i class="fab fa-whatsapp"></i> 0319-7976735</p>
+            <p><i class="fas fa-user"></i> ایم شعیب (اکاؤنٹ ہولڈر)</p>
+        </div>
+        <div class="footer-col">
+            <h5><i class="fas fa-credit-card"></i> ادائیگی کے طریقے</h5>
+            <p><i class="fas fa-mobile-alt"></i> جیز کیش / ایزی پیسہ</p>
+            <p><i class="fas fa-user"></i> 0300-7976735 (محمد شہباز)</p>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p>&copy; 2026 786 ڈیکوریشن اور نمبر پلیٹس۔ جملہ حقوق محفوظ ہیں۔</p>
+    <p class="credit">تیار کردہ (TRC ڈویلپر)</p>
+</footer>
+
+</div>
+
+<!-- ===== LOGIN MODAL ===== -->
+<div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+        <button class="modal-close" id="loginClose">&times;</button>
+        <h3>لاگ ان کریں</h3>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="صارف کا نام (Username)" required />
+            <input type="password" id="loginPassword" placeholder="پاس ورڈ" required />
+            <button type="submit"><i class="fas fa-sign-in-alt"></i> لاگ ان</button>
+        </form>
+        <div class="switch-link" id="switchToRegister">اکاؤنٹ نہیں ہے؟ <span>رجسٹر کریں</span></div>
+    </div>
+</div>
+
+<!-- ===== REGISTER MODAL ===== -->
+<div class="modal-overlay" id="registerModal">
+    <div class="modal-box">
+        <button class="modal-close" id="registerClose">&times;</button>
+        <h3>رجسٹریشن</h3>
+        <form id="registerForm">
+            <input type="text" id="regUsername" placeholder="صارف کا نام (Username)" required />
+            <input type="password" id="regPassword" placeholder="پاس ورڈ" required />
+            <input type="text" id="regPhone" placeholder="فون نمبر" />
+            <input type="text" id="regAddress" placeholder="پتہ (Address) — اختیاری" />
+            <button type="submit"><i class="fas fa-user-plus"></i> رجسٹر کریں</button>
+        </form>
+        <div class="switch-link" id="switchToLogin">پہلے سے اکاؤنٹ موجود ہے؟ <span>لاگ ان کریں</span></div>
+    </div>
+</div>
+
+<!-- ===== ORDER MODAL ===== -->
+<div class="modal-overlay" id="orderModal">
+    <div class="modal-box" style="max-width:520px;">
+        <button class="modal-close" id="orderClose">&times;</button>
+        <h3><i class="fas fa-shopping-cart"></i> آرڈر کریں</h3>
+        <form id="orderForm">
+            <input type="text" id="orderProduct" placeholder="پروڈکٹ کا نام" readonly style="background:rgba(212,175,55,0.05);border-color:var(--gold);" />
+            <input type="text" id="orderPrice" placeholder="قیمت" readonly style="background:rgba(212,175,55,0.05);border-color:var(--gold);" />
+            <input type="text" id="orderName" placeholder="آپ کا نام" required />
+            <input type="text" id="orderPhone" placeholder="فون نمبر (0312-3456789)" required />
+            <input type="text" id="orderAddress" placeholder="مکمل پتہ (شہر، علاقہ، گھر نمبر)" required />
+            <textarea id="orderNotes" placeholder="اضافی ہدایات (اختیاری)"></textarea>
+            <p style="color:#888;font-size:0.85rem;margin-bottom:15px;text-align:center;">
+                <i class="fas fa-info-circle"></i> ادائیگی کا طریقہ: جیز کیش / ایزی پیسہ (0300-7976735)
+            </p>
+            <button type="submit"><i class="fas fa-check-circle"></i> آرڈر جمع کروائیں</button>
+        </form>
+        <div style="margin-top:15px;text-align:center;color:#666;font-size:0.8rem;">
+            <i class="fas fa-lock"></i> آپ کی معلومات محفوظ ہیں
+        </div>
+    </div>
+</div>
+
+<!-- ===== MY ORDERS MODAL ===== -->
+<div class="modal-overlay" id="myOrdersModal">
+    <div class="modal-box" style="max-width:700px;">
+        <button class="modal-close" id="myOrdersClose">&times;</button>
+        <h3><i class="fas fa-shopping-bag"></i> میرے آرڈرز</h3>
+        <div id="myOrdersContent" class="my-orders-container" style="padding:0;"></div>
+    </div>
+</div>
+
+<!-- ===== ORDER DETAILS MODAL (USER SIDE) ===== -->
+<div class="modal-overlay" id="orderDetailsModal">
+    <div class="modal-box" style="max-width:550px;">
+        <button class="modal-close" id="orderDetailsClose">&times;</button>
+        <h3><i class="fas fa-receipt"></i> آرڈر کی تفصیلات</h3>
+        <div id="orderDetailsContent"></div>
+    </div>
+</div>
+
+<!-- ===== ADMIN PANEL ===== -->
+<div class="admin-panel" id="adminPanel">
+    <div class="admin-header">
+        <h2><i class="fas fa-crown"></i> سی ای او ایڈمن پینل</h2>
+        <div>
+            <span style="color:#888;margin-left:15px;font-size:0.85rem;" id="adminStatsBar"></span>
+            <button id="adminLogout"><i class="fas fa-sign-out-alt"></i> لاگ آؤٹ</button>
+        </div>
+    </div>
+    <div class="admin-tabs">
+        <button class="active" data-tab="tabOrders"><i class="fas fa-shopping-bag"></i> آرڈرز</button>
+        <button data-tab="tabProducts"><i class="fas fa-box"></i> مصنوعات</button>
+        <button data-tab="tabUsers"><i class="fas fa-users"></i> صارفین</button>
+        <button data-tab="tabMessages"><i class="fas fa-envelope"></i> پیغامات</button>
+        <button data-tab="tabSettings"><i class="fas fa-cog"></i> سیٹنگز</button>
+    </div>
+
+    <!-- TAB: ORDERS -->
+    <div class="admin-tab-content active" id="tabOrders">
+        <h3 style="color:var(--gold);margin-bottom:15px;"><i class="fas fa-shopping-bag"></i> آرڈرز کا انتظام</h3>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px;">
+            <select id="orderFilterStatus" style="padding:10px 18px;background:rgba(10,10,10,0.8);border:1px solid #222;border-radius:10px;color:#fff;">
+                <option value="all">تمام آرڈرز</option>
+                <option value="pending">زیر التواء (Pending)</option>
+                <option value="processing">پروسیسنگ (Processing)</option>
+                <option value="shipped">شپڈ (Shipped)</option>
+                <option value="delivered">ڈیلیورڈ (Delivered)</option>
+                <option value="cancelled">منسوخ (Cancelled)</option>
+            </select>
+            <input type="text" id="orderSearchInput" placeholder="آرڈر نمبر، نام یا فون سے تلاش کریں..." style="padding:10px 18px;background:rgba(10,10,10,0.8);border:1px solid #222;border-radius:10px;color:#fff;flex:1;min-width:150px;">
+        </div>
+        <table class="admin-table">
+            <thead>
+                <tr><th>آرڈر #</th><th>گاہک</th><th>پروڈکٹ</th><th>رقم</th><th>تاریخ</th><th>اسٹیٹس</th><th>ایکشنز</th></tr>
+            </thead>
+            <tbody id="ordersAdminBody"></tbody>
+        </table>
+    </div>
+
+    <!-- TAB: PRODUCTS -->
+    <div class="admin-tab-content" id="tabProducts">
+        <h3 style="color:var(--gold);margin-bottom:15px;"><i class="fas fa-box"></i> مصنوعات کا انتظام</h3>
+        <div class="admin-add-form" id="addProductForm">
+            <input type="text" id="prodName" placeholder="پروڈکٹ کا نام" />
+            <input type="text" id="prodPrice" placeholder="قیمت (مثال: Rs. 2,500)" />
+            <input type="text" id="prodImg" placeholder="تصویر کا لنک URL (لازمی نہیں)" />
+            <button type="button" id="addProductBtn"><i class="fas fa-plus"></i> شامل کریں</button>
+        </div>
+        <table class="admin-table">
+            <thead><tr><th>نام</th><th>قیمت</th><th>تصویر</th><th>ایکشنز</th></tr></thead>
+            <tbody id="productsAdminBody"></tbody>
+        </table>
+    </div>
+
+    <!-- TAB: USERS -->
+    <div class="admin-tab-content" id="tabUsers">
+        <h3 style="color:var(--gold);margin-bottom:15px;"><i class="fas fa-users"></i> صارفین کا انتظام</h3>
+        <table class="admin-table">
+            <thead><tr><th>صارف کا نام</th><th>پاس ورڈ</th><th>فون نمبر</th><th>پتہ</th><th>شامل ہونے کی تاریخ</th><th>ایکشنز</th></tr></thead>
+            <tbody id="usersAdminBody"></tbody>
+        </table>
+    </div>
+
+    <!-- TAB: MESSAGES -->
+    <div class="admin-tab-content" id="tabMessages">
+        <h3 style="color:var(--gold);margin-bottom:15px;"><i class="fas fa-envelope"></i> گاہکوں کے پیغامات</h3>
+        <div style="background:rgba(15,15,15,0.6);padding:25px;border-radius:16px;margin-top:15px;border:1px solid var(--glass-border);">
+            <p style="color:#888;margin-bottom:20px;">یہاں سے گاہکوں کے سوالات کا جواب دیں</p>
+            <div id="messagesContainer"></div>
+            <div style="margin-top:20px;border-top:1px solid var(--glass-border);padding-top:20px;">
+                <input type="text" id="msgInput" placeholder="اپنا جواب یہاں لکھیں..." style="width:100%;padding:14px 18px;background:rgba(5,5,5,0.8);border:1px solid #222;border-radius:10px;color:#fff;margin-bottom:10px;" />
+                <input type="text" id="msgReplyTo" placeholder="جواب موصول کنندہ (صارف کا نام)" style="width:100%;padding:14px 18px;background:rgba(5,5,5,0.8);border:1px solid #222;border-radius:10px;color:#fff;margin-bottom:10px;" />
+                <button id="sendMsgBtn" style="padding:14px 45px;background:var(--gold-gradient);color:#000;border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:0.3s;">
+                    <i class="fas fa-paper-plane"></i> جواب بھیجیں
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB: SETTINGS -->
+    <div class="admin-tab-content" id="tabSettings">
+        <h3 style="color:var(--gold);margin-bottom:15px;"><i class="fas fa-cog"></i> ترتیبات</h3>
+        <div style="background:rgba(15,15,15,0.6);padding:25px;border-radius:16px;border:1px solid var(--glass-border);">
+            <div style="margin-bottom:20px;">
+                <label style="color:var(--gold);display:block;margin-bottom:8px;">ڈیلیوری ٹائم (دن)</label>
+                <input type="number" id="deliveryTimeDays" value="3" min="1" max="30" style="padding:12px 18px;background:rgba(5,5,5,0.8);border:1px solid #222;border-radius:10px;color:#fff;width:150px;" />
+            </div>
+            <div style="margin-bottom:20px;">
+                <label style="color:var(--gold);display:block;margin-bottom:8px;">واٹس ایپ نمبر (تصویر بھیجنے کے لیے)</label>
+                <input type="text" id="whatsappNumber" value="923197976735" style="padding:12px 18px;background:rgba(5,5,5,0.8);border:1px solid #222;border-radius:10px;color:#fff;width:250px;" />
+            </div>
+            <button id="saveSettingsBtn" style="padding:14px 45px;background:var(--gold-gradient);color:#000;border:none;border-radius:12px;font-weight:700;cursor:pointer;">
+                <i class="fas fa-save"></i> محفوظ کریں
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== TOAST CONTAINER ===== -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script>
+// ============================================================
+//  STORE MANAGER
+// ============================================================
+function getStore() {
+    const raw = localStorage.getItem('store786_v3');
+    if (raw) return JSON.parse(raw);
+    return { products: [], users: [], orders: [], messages: [], nextOrderId: 1001, settings: { deliveryDays: 3, whatsappNumber: '923197976735' } };
+}
+function saveStore(data) {
+    localStorage.setItem('store786_v3', JSON.stringify(data));
+}
+
+// ============================================================
+//  CURRENT USER SESSION
+// ============================================================
+let currentUser = null;
+
+// ============================================================
+//  DEFAULT PRODUCTS
+// ============================================================
+(function initProducts() {
+    const store = getStore();
+    if (store.products.length === 0) {
+        store.products = [
+            { id: 1, name: 'گولڈ نمبر پلیٹ (Gold Number Plate)', price: 'Rs. 2,500', img: 'https://placehold.co/400x300/d4af37/000000?text=Gold+Plate' },
+            { id: 2, name: 'لگژری کار پلیٹ (Luxury Car Plate)', price: 'Rs. 3,200', img: 'https://placehold.co/400x300/d4af37/000000?text=Luxury+Plate' },
+            { id: 3, name: 'وائٹ گولڈن فریم (White Golden Frame)', price: 'Rs. 1,800', img: 'https://placehold.co/400x300/ffffff/d4af37?text=Golden+Frame' },
+            { id: 4, name: '786 نام کی پلیٹ (786 Name Plate)', price: 'Rs. 1,200', img: 'https://placehold.co/400x300/111111/d4af37?text=786' },
+            { id: 5, name: 'کسٹم ڈیزائن پلیٹ (Custom Design Plate)', price: 'Rs. 4,000', img: 'https://placehold.co/400x300/d4af37/000000?text=Custom' },
+            { id: 6, name: 'گھر کی سجاوٹ کا پیس (Home Decoration Piece)', price: 'Rs. 2,000', img: 'https://placehold.co/400x300/222222/d4af37?text=Decoration' },
+        ];
+        saveStore(store);
+    }
+})();
+
+// ============================================================
+//  UTILITY FUNCTIONS
+// ============================================================
+function generateOrderId() {
+    const store = getStore();
+    const id = store.nextOrderId || 1001;
+    store.nextOrderId = id + 1;
+    saveStore(store);
+    return 'ORD-' + id;
+}
+
+function showToast(message, type = 'info') {
+    const container = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = 'toast toast-' + type;
+    toast.innerHTML = message;
+    container.appendChild(toast);
+    setTimeout(() => {
+        toast.classList.add('toast-out');
+        setTimeout(() => toast.remove(), 400);
+    }, 4000);
+}
+
+function getCurrentDateTime() {
+    const now = new Date();
+    return now.toLocaleDateString('en-GB') + ' ' + now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+}
+
+function getDeliveryDate() {
+    const store = getStore();
+    const days = (store.settings && store.settings.deliveryDays) || 3;
+    const d = new Date();
+    d.setDate(d.getDate() + days);
+    return d.toLocaleDateString('en-GB');
+}
+
+function getStatusLabel(status) {
+    const map = {
+        pending: 'زیر التواء',
+        processing: 'پروسیسنگ',
+        shipped: 'شپڈ',
+        delivered: 'ڈیلیورڈ',
+        cancelled: 'منسوخ'
+    };
+    return map[status] || status;
+}
+
+function getStatusClass(status) {
+    return 'status-' + status;
+}
+
+// ============================================================
+//  WELCOME OVERLAY + PARTICLES
+// ============================================================
+function createParticles(containerId, count) {
+    const container = document.getElementById(containerId);
+    for (let i = 0; i < count; i++) {
+        const p = document.createElement('div');
+        p.className = 'welcome-particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (8 + Math.random() * 12) + 's';
+        p.style.animationDelay = (Math.random() * 10) + 's';
+        p.style.width = (2 + Math.random() * 4) + 'px';
+        p.style.height = p.style.width;
+        container.appendChild(p);
+    }
+}
+createParticles('welcomeParticles', 40);
+
+(function() {
+    const container = document.getElementById('heroParticles');
+    for (let i = 0; i < 20; i++) {
+        const p = document.createElement('div');
+        p.className = 'hero-particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (15 + Math.random() * 20) + 's';
+        p.style.animationDelay = (Math.random() * 10) + 's';
+        container.appendChild(p);
+    }
+})();
+
+document.getElementById('enterBtn').addEventListener('click', function() {
+    try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = 800;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.3, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.3);
+    } catch(e) {}
+    document.getElementById('welcomeOverlay').classList.add('hidden');
+    document.getElementById('siteContainer').classList.add('active');
+    setTimeout(observeScroll, 100);
+    checkLoggedInUser();
+});
+
+// ============================================================
+//  SCROLL ANIMATION OBSERVER
+// ============================================================
+function observeScroll() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+}
+
+// ============================================================
+//  RENDER PRODUCTS
+// ============================================================
+function renderProducts(filter) {
+    const store = getStore();
+    const container = document.getElementById('productsContainer');
+    let list = store.products;
+    if (filter) {
+        const f = filter.toLowerCase();
+        list = list.filter(p => p.name.toLowerCase().includes(f));
+    }
+    if (!list.length) {
+        container.innerHTML = '<div style="text-align:center;width:100%;color:#666;padding:40px;"><i class="fas fa-search"></i> کوئی پروڈکٹ نہیں ملی۔</div>';
+        return;
+    }
+    container.innerHTML = list.map(p => `
+        <div class="product-card fade-up">
+            <div class="img-box">
+                ${p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'no-img\\'><i class=\\'fas fa-image\\' style=\\'font-size:2rem;color:#333;display:block;margin-bottom:8px;\\'></i>تصویر موجود نہیں</div>'">` 
+                : '<div class="no-img"><i class="fas fa-image" style="font-size:2rem;color:#333;display:block;margin-bottom:8px;"></i>تصویر موجود نہیں</div>'}
+                <span class="product-badge">پریمیم</span>
+            </div>
+            <div class="info">
+                <h4>${p.name}</h4>
+                <div class="price">${p.price}</div>
+            </div>
+            <button class="buy-btn" onclick="openOrderModal(${p.id})"><i class="fas fa-shopping-cart"></i> ابھی آرڈر کریں</button>
+        </div>
+    `).join('');
+    setTimeout(observeScroll, 100);
+}
+renderProducts();
+
+// ============================================================
+//  SEARCH
+// ============================================================
+document.getElementById('searchBtn').addEventListener('click', function() {
+    renderProducts(document.getElementById('searchInput').value.trim());
+});
+document.getElementById('searchInput').addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') renderProducts(this.value.trim());
+});
+
+// ============================================================
+//  REVIEWS
+// ============================================================
+const reviews = [
+    { name: 'احمد آر.', stars: '★★★★★', text: 'بہت اعلیٰ کوالٹی۔ نمبر پلیٹ بہت خوبصورت لگتی ہے۔ گولڈ فنشنگ واقعی شاندار ہے۔' },
+    { name: 'ثناء کے.', stars: '★★★★☆', text: 'ٹھیک ہے، ڈیلیوری ٹائم تھوڑا زیادہ لگا لیکن پروڈکٹ بہت اچھی ہے۔ قیمت کے مطابق بہترین۔' },
+    { name: 'عثمان ایم.', stars: '★★★★★', text: 'گولڈ فنشنگ بہت زبردست ہے۔ میں سب کو یہی تجویز کروں گا! واقعی لگژری لگتا ہے۔' },
+    { name: 'فاطمہ اے.', stars: '★★★☆☆', text: 'قیمت تھوڑی زیادہ ہے لیکن کام تسلی بخش ہے۔ خوبصورت ڈیزائن ہے۔' },
+    { name: 'بلال ایس.', stars: '★★★★★', text: 'میں نے 3 پلیٹس آرڈر کی تھیں، تینوں بالکل پرفیکٹ تھیں۔ بہت پروفیشنل کام ہے۔' },
+    { name: 'زارا ایچ.', stars: '★★★★☆', text: 'ڈیزائن بہت اچھا ہے، میری توقعات سے بڑھ کر ہے۔ گھر کی ڈیکوریشن کے لیے بہترین۔' },
+    { name: 'علی آر.', stars: '★★★★★', text: 'واہ! بہت خوب۔ گھر کی ڈیکوریشن کے لیے بہترین چیز ہے۔ سب دوستوں کو بتایا ہے۔' },
+    { name: 'حنا ٹی.', stars: '★★★★☆', text: 'پروڈکٹ اچھی ہے، لیکن پیکنگ تھوڑی بہتر ہو سکتی تھی۔ باقی سب ٹھیک ہے۔' },
+];
+const avatarLetters = ['اح', 'ث', 'ع', 'ف', 'ب', 'ز', 'ع', 'ح'];
+document.getElementById('reviewsContainer').innerHTML = reviews.map((r, idx) =>
+    `<div class="review-card fade-up">
+        <div class="review-avatar">${avatarLetters[idx]}</div>
+        <div class="stars">${r.stars}</div>
+        <p>"${r.text}"</p>
+        <div class="name">— ${r.name}</div>
+    </div>`
+).join('');
+
+// ============================================================
+//  AUTH SYSTEM
+// ============================================================
+const loginModal = document.getElementById('loginModal');
+const registerModal = document.getElementById('registerModal');
+
+document.getElementById('loginBtn').onclick = () => loginModal.classList.add('active');
+document.getElementById('registerBtn').onclick = () => registerModal.classList.add('active');
+document.getElementById('loginClose').onclick = () => loginModal.classList.remove('active');
+document.getElementById('registerClose').onclick = () => registerModal.classList.remove('active');
+document.getElementById('switchToRegister').onclick = () => { loginModal.classList.remove('active'); registerModal.classList.add('active'); };
+document.getElementById('switchToLogin').onclick = () => { registerModal.classList.remove('active'); loginModal.classList.add('active'); };
+
+document.querySelectorAll('.modal-overlay').forEach(m => {
+    m.addEventListener('click', function(e) {
+        if (e.target === this) this.classList.remove('active');
+    });
+});
+
+// REGISTER
+document.getElementById('registerForm').onsubmit = function(e) {
+    e.preventDefault();
+    const store = getStore();
+    const username = document.getElementById('regUsername').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+    const phone = document.getElementById('regPhone').value.trim();
+    const address = document.getElementById('regAddress').value.trim();
+    if (!username || !password) { showToast('براہ کرم تمام ضروری خانے پُر کریں۔', 'error'); return; }
+    if (store.users.find(u => u.username === username)) { showToast('یہ صارف کا نام پہلے سے موجود ہے۔', 'error'); return; }
+    store.users.push({ username, password, phone, address, joined: new Date().toLocaleDateString('en-GB') });
+    saveStore(store);
+    showToast('رجسٹریشن کامیاب! اب آپ لاگ ان کر سکتے ہیں۔', 'success');
+    registerModal.classList.remove('active');
+    document.getElementById('registerForm').reset();
+};
+
+// LOGIN
+document.getElementById('loginForm').onsubmit = function(e) {
+    e.preventDefault();
+    const store = getStore();
+    const username = document.getElementById('loginUsername').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
+    const user = store.users.find(u => u.username === username && u.password === password);
+    if (user) {
+        currentUser = user.username;
+        localStorage.setItem('786_logged_in', currentUser);
+        showToast('لاگ ان کامیاب! خوش آمدید ' + username, 'success');
+        loginModal.classList.remove('active');
+        document.getElementById('loginForm').reset();
+        updateAuthUI();
+    } else {
+        showToast('غلط صارف کا نام یا پاس ورڈ۔', 'error');
+    }
+};
+
+function checkLoggedInUser() {
+    const saved = localStorage.getItem('786_logged_in');
+    if (saved) {
+        const store = getStore();
+        const user = store.users.find(u => u.username === saved);
+        if (user) {
+            currentUser = user.username;
+            updateAuthUI();
+        } else {
+            localStorage.removeItem('786_logged_in');
+        }
+    }
+}
+
+function updateAuthUI() {
+    if (currentUser) {
+        document.getElementById('authButtons').style.display = 'none';
+        document.getElementById('userDropdownWrapper').style.display = 'inline-block';
+        document.getElementById('loggedInUserName').textContent = currentUser;
+    } else {
+        document.getElementById('authButtons').style.display = 'flex';
+        document.getElementById('userDropdownWrapper').style.display = 'none';
+    }
+}
+
+// USER DROPDOWN
+document.getElementById('userDropdownBtn').onclick = function(e) {
+    e.stopPropagation();
+    const menu = document.getElementById('userDropdownMenu');
+    menu.classList.toggle('show');
+};
+document.addEventListener('click', function() {
+    document.getElementById('userDropdownMenu').classList.remove('show');
+});
+
+document.getElementById('userLogoutBtn').onclick = function(e) {
+    e.preventDefault();
+    currentUser = null;
+    localStorage.removeItem('786_logged_in');
+    updateAuthUI();
+    showToast('لاگ آؤٹ کر دیا گیا۔', 'info');
+    document.getElementById('userDropdownMenu').classList.remove('show');
+};
+
+// ============================================================
+//  MY ORDERS (صرف صارف کے اپنے آرڈرز)
+// ============================================================
+document.getElementById('myOrdersLink').onclick = function(e) {
+    e.preventDefault();
+    document.getElementById('userDropdownMenu').classList.remove('show');
+    renderMyOrders();
+    document.getElementById('myOrdersModal').classList.add('active');
+};
+
+document.getElementById('myOrdersClose').onclick = function() {
+    document.getElementById('myOrdersModal').classList.remove('active');
+};
+
+function renderMyOrders() {
+    const store = getStore();
+    const container = document.getElementById('myOrdersContent');
+    if (!currentUser) {
+        container.innerHTML = '<p style="text-align:center;color:#888;padding:30px;"><i class="fas fa-user-lock"></i> براہ کرم پہلے لاگ ان کریں۔</p>';
+        return;
+    }
+
+    const userOrders = (store.orders || []).filter(o => o.customerUsername === currentUser);
+
+    if (!userOrders.length) {
+        container.innerHTML = '<p style="text-align:center;color:#888;padding:30px;"><i class="fas fa-inbox"></i> ابھی تک کوئی آرڈر نہیں ہے۔</p>';
+        return;
+    }
+
+    // Sort newest first
+    userOrders.reverse();
+
+    container.innerHTML = userOrders.map(o => {
+        const statusLabels = {
+            pending: 'زیر التواء', processing: 'پروسیسنگ', shipped: 'شپڈ',
+            delivered: 'ڈیلیورڈ', cancelled: 'منسوخ'
+        };
+        const statusClasses = {
+            pending: 'status-pending', processing: 'status-processing', shipped: 'status-shipped',
+            delivered: 'status-delivered', cancelled: 'status-cancelled'
+        };
+
+        // Order tracker steps
+        const steps = [
+            { key: 'pending', label: 'آرڈر موصول' },
+            { key: 'processing', label: 'پروسیسنگ' },
+            { key: 'shipped', label: 'شپڈ' },
+            { key: 'delivered', label: 'ڈیلیورڈ' }
+        ];
+
+        let currentStepIdx = steps.findIndex(s => s.key === o.status);
+        if (o.status === 'cancelled') currentStepIdx = -1;
+        if (currentStepIdx === -1 && o.status !== 'cancelled') currentStepIdx = 0;
+
+        const stepsHtml = steps.map((s, idx) => {
+            let cls = '';
+            if (o.status === 'cancelled') {
+                cls = 'cancelled';
+            } else if (idx <= currentStepIdx) {
+                cls = 'active';
+            }
+            return `<div class="step ${cls}">
+                <div class="dot">${idx <= currentStepIdx ? '<i class="fas fa-check"></i>' : idx+1}</div>
+                <div class="label">${s.label}</div>
+            </div>`;
+        }).join('');
+
+        // WhatsApp share text
+        const store2 = getStore();
+        const waNum = (store2.settings && store2.settings.whatsappNumber) || '923197976735';
+        const shareText = encodeURIComponent(
+            `*786 ڈیکوریشن اور نمبر پلیٹس*\n\n` +
+            `🆔 آرڈر نمبر: ${o.id}\n` +
+            `📦 پروڈکٹ: ${o.productName}\n` +
+            `💰 قیمت: ${o.productPrice}\n` +
+            `👤 نام: ${o.customerName}\n` +
+            `📞 فون: ${o.customerPhone}\n` +
+            `📍 پتہ: ${o.customerAddress}\n` +
+            `📅 تاریخ: ${o.createdAt}\n` +
+            `📊 اسٹیٹس: ${statusLabels[o.status] || o.status}\n\n` +
+            `*براہ کرم میرا آرڈر کنفرم کریں* 🙏`
+        );
+
+        return `<div class="order-card">
+            <div class="order-header">
+                <span class="order-id"><i class="fas fa-receipt"></i> ${o.id}</span>
+                <span class="order-date"><i class="far fa-clock"></i> ${o.createdAt}</span>
+                <span class="status-badge ${statusClasses[o.status] || 'status-pending'}">${statusLabels[o.status] || o.status}</span>
+            </div>
+            <div class="order-body">
+                <div class="product-name">${o.productName}</div>
+                <div class="order-details">
+                    <i class="fas fa-user"></i> ${o.customerName}<br>
+                    <i class="fas fa-phone"></i> ${o.customerPhone}<br>
+                    <i class="fas fa-map-marker-alt"></i> ${o.customerAddress}
+                </div>
+                ${o.status !== 'cancelled' ? `
+                <div class="order-tracker">
+                    ${stepsHtml}
+                </div>` : `<p style="color:#ff4444;text-align:center;padding:10px;font-weight:600;"><i class="fas fa-times-circle"></i> یہ آرڈر منسوخ کر دیا گیا ہے</p>`}
+                ${o.notes ? `<p style="color:#888;font-size:0.85rem;margin-top:10px;"><i class="fas fa-sticky-note"></i> نوٹ: ${o.notes}</p>` : ''}
+            </div>
+            <div class="order-footer">
+                <span class="price">${o.productPrice}</span>
+                <a href="https://wa.me/${waNum}?text=${shareText}" target="_blank" class="whatsapp-share-btn">
+                    <i class="fab fa-whatsapp"></i> واٹس ایپ پر بھیجیں
+                </a>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+// ============================================================
+//  ORDER MODAL
+// ============================================================
+let currentOrderProductId = null;
+
+window.openOrderModal = function(productId) {
+    if (!currentUser) {
+        showToast('براہ کرم پہلے لاگ ان کریں۔', 'error');
+        loginModal.classList.add('active');
+        return;
+    }
+    const store = getStore();
+    const product = store.products.find(p => p.id === productId);
+    if (!product) return;
+    currentOrderProductId = productId;
+    document.getElementById('orderProduct').value = product.name;
+    document.getElementById('orderPrice').value = product.price;
+    // Pre-fill user info
+    const user = store.users.find(u => u.username === currentUser);
+    if (user) {
+        document.getElementById('orderName').value = user.username || '';
+        document.getElementById('orderPhone').value = user.phone || '';
+        document.getElementById('orderAddress').value = user.address || '';
+    }
+    document.getElementById('orderModal').classList.add('active');
+};
+
+document.getElementById('orderClose').onclick = () => {
+    document.getElementById('orderModal').classList.remove('active');
+    document.getElementById('orderForm').reset();
+};
+
+document.getElementById('orderForm').onsubmit = function(e) {
+    e.preventDefault();
+    if (!currentUser) {
+        showToast('براہ کرم پہلے لاگ ان کریں۔', 'error');
+        document.getElementById('orderModal').classList.remove('active');
+        loginModal.classList.add('active');
+        return;
+    }
+
+    const store = getStore();
+    const product = store.products.find(p => p.id === currentOrderProductId);
+    if (!product) { showToast('پروڈکٹ نہیں ملی۔', 'error'); return; }
+
+    const name = document.getElementById('orderName').value.trim();
+    const phone = document.getElementById('orderPhone').value.trim();
+    const address = document.getElementById('orderAddress').value.trim();
+    const notes = document.getElementById('orderNotes').value.trim();
+
+    if (!name || !phone || !address) {
+        showToast('براہ کرم تمام ضروری خانے پُر کریں۔', 'error');
+        return;
+    }
+
+    if (!store.orders) store.orders = [];
+
+    const order = {
+        id: generateOrderId(),
+        customerUsername: currentUser,
+        customerName: name,
+        customerPhone: phone,
+        customerAddress: address,
+        productName: product.name,
+        productPrice: product.price,
+        notes: notes,
+        status: 'processing',  // Automatically "processing" on placement
+        createdAt: getCurrentDateTime(),
+        updatedAt: getCurrentDateTime(),
+        deliveryDate: getDeliveryDate()
+    };
+
+    store.orders.push(order);
+    // Also save user's phone/address if not already saved
+    const user = store.users.find(u => u.username === currentUser);
+    if (user) {
+        if (!user.phone && phone) user.phone = phone;
+        if (!user.address && address) user.address = address;
+    }
+    saveStore(store);
+
+    showToast('آرڈر نمبر ' + order.id + ' کامیابی سے جمع ہو گیا!', 'success');
+    document.getElementById('orderModal').classList.remove('active');
+    document.getElementById('orderForm').reset();
+
+    // WhatsApp share after order placement
+    const waNum = (store.settings && store.settings.whatsappNumber) || '923197976735';
+    const shareText = encodeURIComponent(
+        `*786 ڈیکوریشن اور نمبر پلیٹس*\n\n` +
+        `🆔 آرڈر نمبر: ${order.id}\n` +
+        `📦 پروڈکٹ: ${order.productName}\n` +
+        `💰 قیمت: ${order.productPrice}\n` +
+        `👤 نام: ${order.customerName}\n` +
+        `📞 فون: ${order.customerPhone}\n` +
+        `📍 پتہ: ${order.customerAddress}\n` +
+        `📅 تاریخ: ${order.createdAt}\n\n` +
+        `*براہ کرم میرا آرڈر کنفرم کریں* 🙏`
+    );
+
+    // Show WhatsApp share option
+    if (confirm('آرڈر کامیاب! کیا آپ واٹس ایپ پر آرڈر کی تفصیلات بھیجنا چاہتے ہیں؟')) {
+        window.open('https://wa.me/' + waNum + '?text=' + shareText, '_blank');
+    }
+};
+
+// ============================================================
+//  ADMIN PANEL
+// ============================================================
+let adminLoggedIn = false;
+const adminPanel = document.getElementById('adminPanel');
+
+document.getElementById('adminPanelBtn').onclick = function() {
+    if (adminLoggedIn) {
+        adminPanel.classList.add('active');
+        refreshAdmin();
+        return;
+    }
+    const pw = prompt('سی ای او پاس ورڈ درج کریں (CEO Password):');
+    if (pw === '@malik2786') {
+        adminLoggedIn = true;
+        adminPanel.classList.add('active');
+        refreshAdmin();
+    } else {
+        showToast('غلط پاس ورڈ! رسائی کی اجازت نہیں ہے۔', 'error');
+    }
+};
+
+document.getElementById('adminLogout').onclick = function() {
+    adminLoggedIn = false;
+    adminPanel.classList.remove('active');
+    showToast('ایڈمن پینل سے لاگ آؤٹ کر دیا گیا۔', 'info');
+};
+
+// Admin tabs
+document.querySelectorAll('.admin-tabs button').forEach(btn => {
+    btn.onclick = function() {
+        document.querySelectorAll('.admin-tabs button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        const tabId = this.dataset.tab;
+        document.getElementById(tabId).classList.add('active');
+        if (tabId === 'tabOrders') renderAdminOrders('all', '');
+        if (tabId === 'tabProducts') renderAdminProducts();
+        if (tabId === 'tabUsers') renderAdminUsers();
+        if (tabId === 'tabMessages') renderMessages();
+    };
+});
+
+function refreshAdmin() {
+    const store = getStore();
+    const totalOrders = (store.orders || []).length;
+    const pendingOrders = (store.orders || []).filter(o => o.status === 'pending').length;
+    const procOrders = (store.orders || []).filter(o => o.status === 'processing').length;
+    document.getElementById('adminStatsBar').innerHTML =
+        '<i class="fas fa-shopping-bag"></i> کل: ' + totalOrders +
+        ' | <i class="fas fa-clock"></i> زیر التواء: ' + pendingOrders +
+        ' | <i class="fas fa-cog"></i> پروسیسنگ: ' + procOrders +
+        ' | <i class="fas fa-box"></i> مصنوعات: ' + store.products.length +
+        ' | <i class="fas fa-users"></i> صارفین: ' + store.users.length;
+    renderAdminOrders(document.getElementById('orderFilterStatus').value, document.getElementById('orderSearchInput').value);
+    renderAdminProducts();
+    renderAdminUsers();
+    renderMessages();
+}
+
+// ============================================================
+//  ADMIN: ORDERS
+// ============================================================
+function renderAdminOrders(statusFilter, searchFilter) {
+    const store = getStore();
+    let orders = store.orders || [];
+
+    if (statusFilter && statusFilter !== 'all') {
+        orders = orders.filter(o => o.status === statusFilter);
+    }
+    if (searchFilter) {
+        const f = searchFilter.toLowerCase();
+        orders = orders.filter(o =>
+            o.id.toLowerCase().includes(f) ||
+            o.customerName.toLowerCase().includes(f) ||
+            o.customerPhone.includes(f) ||
+            (o.customerUsername && o.customerUsername.toLowerCase().includes(f))
+        );
+    }
+
+    // Sort newest first
+    orders = [...orders].reverse();
+
+    const tbody = document.getElementById('ordersAdminBody');
+    if (!orders.length) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#888;padding:30px;"><i class="fas fa-inbox"></i> کوئی آرڈر نہیں ملے۔</td></tr>';
+        return;
+    }
+
+    tbody.innerHTML = orders.map(o => {
+        const st = getStatusLabel(o.status);
+        const sc = getStatusClass(o.status);
+        return `<tr>
+            <td><strong style="color:var(--gold);">${o.id}</strong></td>
+            <td>${o.customerName}<br><small style="color:#666;">${o.customerPhone}${o.customerUsername ? ' (@' + o.customerUsername + ')' : ''}</small></td>
+            <td>${o.productName}</td>
+            <td>${o.productPrice}</td>
+            <td><small style="color:#666;">${o.createdAt}</small></td>
+            <td><span class="status-badge ${sc}">${st}</span></td>
+            <td>
+                <button class="view-btn" onclick="viewAdminOrder('${o.id}')"><i class="fas fa-eye"></i></button>
+                <button class="edit-btn" onclick="changeOrderStatus('${o.id}')"><i class="fas fa-edit"></i></button>
+                <button class="del-btn" onclick="deleteOrder('${o.id}')"><i class="fas fa-trash"></i></button>
+            </td>
+        </tr>`;
+    }).join('');
+}
+
+window.viewAdminOrder = function(orderId) {
+    const store = getStore();
+    const order = store.orders.find(o => o.id === orderId);
+    if (!order) return;
+
+    const statusLabels = {
+        pending: 'زیر التواء', processing: 'پروسیسنگ', shipped: 'شپڈ',
+        delivered: 'ڈیلیورڈ', cancelled: 'منسوخ'
+    };
+
+    const msg = `🆔 آرڈر: ${order.id}
+👤 صارف: ${order.customerUsername || 'N/A'}
+👤 نام: ${order.customerName}
+📞 فون: ${order.customerPhone}
+📍 پتہ: ${order.customerAddress}
+📦 پروڈکٹ: ${order.productName}
+💰 قیمت: ${order.productPrice}
+📊 اسٹیٹس: ${statusLabels[order.status] || order.status}
+📅 تاریخ: ${order.createdAt}
+📅 اپ ڈیٹ: ${order.updatedAt || '—'}
+📅 ڈیلیوری: ${order.deliveryDate || '—'}
+${order.notes ? '📝 نوٹ: ' + order.notes : ''}`;
+
+    alert(msg);
+};
+
+window.changeOrderStatus = function(orderId) {
+    const store = getStore();
+    const order = store.orders.find(o => o.id === orderId);
+    if (!order) return;
+
+    const statuses = ['pending', 'processing', 'shipped', 'delivered', 'cancelled'];
+    const labels = {
+        pending: 'زیر التواء', processing: 'پروسیسنگ', shipped: 'شپڈ',
+        delivered: 'ڈیلیورڈ', cancelled: 'منسوخ'
+    };
+
+    let msg = 'آرڈر ' + orderId + ' کا موجودہ اسٹیٹس: ' + labels[order.status] + '\n\n';
+    msg += 'نیا اسٹیٹس منتخب کریں:\n';
+    statuses.forEach((s, i) => {
+        msg += (i+1) + '. ' + labels[s] + '\n';
+    });
+    msg += '\nنمبر درج کریں (1-5):';
+
+    const choice = prompt(msg);
+    if (!choice) return;
+    const idx = parseInt(choice) - 1;
+    if (idx < 0 || idx >= statuses.length) {
+        showToast('غلط انتخاب!', 'error');
+        return;
+    }
+
+    const newStatus = statuses[idx];
+    order.status = newStatus;
+    order.updatedAt = getCurrentDateTime();
+    if (newStatus === 'shipped' || newStatus === 'delivered') {
+        if (!order.deliveryDate) order.deliveryDate = getDeliveryDate();
+    }
+    saveStore(store);
+    renderAdminOrders(document.getElementById('orderFilterStatus').value, document.getElementById('orderSearchInput').value);
+    refreshAdmin();
+    showToast('آرڈر ' + orderId + ' کا اسٹیٹس "' + labels[newStatus] + '" کر دیا گیا۔', 'success');
+};
+
+window.deleteOrder = function(orderId) {
+    if (!confirm('کیا آپ واقعی آرڈر ' + orderId + ' کو حذف کرنا چاہتے ہیں؟')) return;
+    const store = getStore();
+    store.orders = store.orders.filter(o => o.id !== orderId);
+    saveStore(store);
+    renderAdminOrders(document.getElementById('orderFilterStatus').value, document.getElementById('orderSearchInput').value);
+    refreshAdmin();
+    showToast('آرڈر حذف کر دیا گیا۔', 'info');
+};
+
+document.getElementById('orderFilterStatus').onchange = function() {
+    renderAdminOrders(this.value, document.getElementById('orderSearchInput').value);
+};
+document.getElementById('orderSearchInput').onkeyup = function() {
+    renderAdminOrders(document.getElementById('orderFilterStatus').value, this.value);
+};
+
+// ============================================================
+//  ADMIN: PRODUCTS
+// ============================================================
+function renderAdminProducts() {
+    const store = getStore();
+    document.getElementById('productsAdminBody').innerHTML = store.products.map(p =>
+        `<tr><td>${p.name}</td><td>${p.price}</td><td style="max-width:150px;overflow:hidden;text-overflow:ellipsis;color:#555;">${p.img || 'تصویر نہیں'}</td>
+        <td><button class="edit-btn" onclick="editProduct(${p.id})"><i class="fas fa-edit"></i></button>
+        <button class="del-btn" onclick="deleteProduct(${p.id})"><i class="fas fa-trash"></i></button></td></tr>`
+    ).join('');
+}
+
+window.deleteProduct = function(id) {
+    if (!confirm('کیا آپ اس پروڈکٹ کو حذف کرنا چاہتے ہیں؟')) return;
+    const store = getStore();
+    store.products = store.products.filter(p => p.id !== id);
+    saveStore(store);
+    renderAdminProducts();
+    renderProducts();
+    refreshAdmin();
+};
+
+window.editProduct = function(id) {
+    const store = getStore();
+    const prod = store.products.find(p => p.id === id);
+    if (!prod) return;
+    const name = prompt('پروڈکٹ کا نام:', prod.name);
+    if (!name) return;
+    const price = prompt('قیمت:', prod.price);
+    if (!price) return;
+    const img = prompt('تصویر کا لنک (Image URL):', prod.img || '');
+    prod.name = name; prod.price = price; prod.img = img;
+    saveStore(store);
+    renderAdminProducts();
+    renderProducts();
+};
+
+document.getElementById('addProductBtn').onclick = function() {
+    const name = document.getElementById('prodName').value.trim();
+    const price = document.getElementById('prodPrice').value.trim();
+    const img = document.getElementById('prodImg').value.trim();
+    if (!name || !price) { showToast('نام اور قیمت درج کرنا لازمی ہے۔', 'error'); return; }
+    const store = getStore();
+    const maxId = store.products.length ? Math.max(...store.products.map(p => p.id)) : 0;
+    store.products.push({ id: maxId + 1, name, price, img });
+    saveStore(store);
+    document.getElementById('prodName').value = '';
+    document.getElementById('prodPrice').value = '';
+    document.getElementById('prodImg').value = '';
+    renderAdminProducts();
+    renderProducts();
+    refreshAdmin();
+    showToast('نئی پروڈکٹ شامل کر دی گئی!', 'success');
+};
+
+// ============================================================
+//  ADMIN: USERS
+// ============================================================
+function renderAdminUsers() {
+    const store = getStore();
+    const tbody = document.getElementById('usersAdminBody');
+    if (!store.users.length) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#888;padding:30px;"><i class="fas fa-users"></i> ابھی تک کوئی صارف رجسٹرڈ نہیں ہے۔</td></tr>';
+        return;
+    }
+    tbody.innerHTML = store.users.map((u, idx) =>
+        `<tr><td>${u.username}</td><td>${u.password}</td><td>${u.phone || '—'}</td><td>${u.address || '—'}</td><td>${u.joined || 'نامعلوم'}</td>
+        <td><button class="edit-btn" onclick="editUser(${idx})"><i class="fas fa-edit"></i></button>
+        <button class="del-btn" onclick="deleteUser(${idx})"><i class="fas fa-trash"></i></button></td></tr>`
+    ).join('');
+}
+
+window.editUser = function(idx) {
+    const store = getStore();
+    const u = store.users[idx];
+    if (!u) return;
+    const pw = prompt('صارف ' + u.username + ' کے لیے نیا پاس ورڈ درج کریں:', u.password);
+    if (!pw) return;
+    u.password = pw;
+    saveStore(store);
+    renderAdminUsers();
+    showToast('صارف کا پاس ورڈ اپ ڈیٹ کر دیا گیا۔', 'success');
+};
+
+window.deleteUser = function(idx) {
+    if (!confirm('کیا آپ اس صارف کو حذف کرنا چاہتے ہیں؟')) return;
+    const store = getStore();
+    store.users.splice(idx, 1);
+    saveStore(store);
+    renderAdminUsers();
+    refreshAdmin();
+};
+
+// ============================================================
+//  ADMIN: MESSAGES
+// ============================================================
+function renderMessages() {
+    const store = getStore();
+    const container = document.getElementById('messagesContainer');
+    if (!store.messages || !store.messages.length) {
+        container.innerHTML = '<p style="color:#888;padding:20px;text-align:center;"><i class="fas fa-inbox"></i> ابھی تک کوئی پیغام نہیں ہے۔</p>';
+        return;
+    }
+    container.innerHTML = store.messages.map(m =>
+        `<div style="background:rgba(5,5,5,0.5);padding:18px;border-radius:12px;margin-bottom:12px;border-right:3px solid var(--gold);text-align:right;">
+            <strong style="color:var(--gold);"><i class="fas fa-user"></i> بجانب: ${m.from}</strong>
+            ${m.replyTo ? '<span style="color:#666;font-size:0.8rem;margin-right:10px;">→ ' + m.replyTo + '</span>' : ''}
+            <p style="color:#bbb;margin-top:8px;">${m.text}</p>
+            ${m.reply ? '<p style="color:#25D366;margin-top:6px;font-size:0.9rem;padding:8px 12px;background:rgba(37,211,102,0.05);border-radius:8px;"><i class="fas fa-reply"></i> ایڈمن کا جواب: ' + m.reply + '</p>' : ''}
+            <small style="color:#444;display:block;margin-top:6px;"><i class="far fa-clock"></i> ${m.time || ''}</small>
+        </div>`
+    ).join('');
+}
+
+document.getElementById('sendMsgBtn').onclick = function() {
+    const store = getStore();
+    const text = document.getElementById('msgInput').value.trim();
+    const replyTo = document.getElementById('msgReplyTo').value.trim();
+    if (!text || !replyTo) { showToast('براہ کرم پیغام لکھیں اور صارف کا نام واضح کریں۔', 'error'); return; }
+    if (!store.messages) store.messages = [];
+    store.messages.push({
+        from: 'ایڈمن (Admin)',
+        text: text,
+        reply: '',
+        time: getCurrentDateTime(),
+        replyTo: replyTo
+    });
+    saveStore(store);
+    document.getElementById('msgInput').value = '';
+    document.getElementById('msgReplyTo').value = '';
+    renderMessages();
+    showToast('پیغام بھیج دیا گیا!', 'success');
+};
+
+// ============================================================
+//  SETTINGS TAB
+// ============================================================
+document.getElementById('saveSettingsBtn').onclick = function() {
+    const store = getStore();
+    const days = parseInt(document.getElementById('deliveryTimeDays').value) || 3;
+    const waNum = document.getElementById('whatsappNumber').value.trim() || '923197976735';
+    if (!store.settings) store.settings = {};
+    store.settings.deliveryDays = days;
+    store.settings.whatsappNumber = waNum;
+    saveStore(store);
+    showToast('ترتیبات محفوظ کر دی گئیں!', 'success');
+};
+
+// Load settings
+(function loadSettings() {
+    const store = getStore();
+    if (store.settings) {
+        document.getElementById('deliveryTimeDays').value = store.settings.deliveryDays || 3;
+        document.getElementById('whatsappNumber').value = store.settings.whatsappNumber || '923197976735';
+    }
+})();
+
+// ============================================================
+//  KEYBOARD SHORTCUTS
+// ============================================================
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+        e.preventDefault();
+        document.getElementById('adminPanelBtn').click();
+    }
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active'));
+    }
+});
+
+// ============================================================
+//  INIT
+// ============================================================
+setTimeout(observeScroll, 500);
+checkLoggedInUser();
+
+console.log('%c🚀 786 ڈیکوریشن v3.0 - مکمل اپ گریڈ', 'font-size:20px;color:#d4af37;font-weight:bold;');
+console.log('%c🔐 ایڈمن: Ctrl+Shift+A | پاس: @malik2786', 'font-size:14px;color:#888;');
+console.log('%c👤 آرڈر پلیسمنٹ پر خودکار "پروسیسنگ" اسٹیٹس', 'font-size:14px;color:#4a9eff;');
+console.log('%c📱 ہر صارف کے لیے "میرے آرڈرز" علیحدہ فولڈر', 'font-size:14px;color:#25D366;');
+</script>
+</body>
+</html><script>console.log('Viewer ready');</script></body></html>
